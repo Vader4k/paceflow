@@ -4,7 +4,8 @@ import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Lead from '@/components/Lead'
 import Navbar from '@/components/Navbar'
-import Steps from '@/components/Steps'
+import Plan from '@/components/Plan'
+import Step from '@/components/Step'
 import WhyWeAreTrusted from '@/components/WhyWeAreTrusted'
 import Works from '@/components/Works'
 
@@ -18,8 +19,9 @@ const Home = () => {
       <Lead />
       <Works />
       <WhyWeAreTrusted />
+      <Plan />
       <Faq />
-      <Steps />
+      <Step />
       <Footer />
     </main>
   )

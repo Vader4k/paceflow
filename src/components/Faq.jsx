@@ -1,146 +1,106 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 const Faq = () => {
-  const starter = {
-    icon: "/starter.svg",
-    amount: 9,
-    desc: "Perfect for self-employed beginners",
-    benefits: [
-      { id: 1, text: "Send 10 quotes and invoices" },
-      { id: 2, text: "Connect up to 2 bank accounts" },
-      { id: 3, text: "Track up to 15 expenses per month" },
-      { id: 4, text: "Manual payroll support" },
-      { id: 5, text: "Export up to 3 reports" },
-    ],
+  const [activeAccordion, setActiveAccordion] = useState(0);
+
+  const handleActiveAccordion = (index) => {
+    if (activeAccordion === index) {
+      setActiveAccordion(0);
+    } else {
+      setActiveAccordion(index);
+    }
   };
 
-  const smallBiz = {
-    icon: "/smallbiz.svg",
-    amount: 15,
-    desc: "Perfect for small / medium sized businesses",
-    benefits: [
-      { id: 1, text: "Send 25 quotes and invoices" },
-      { id: 2, text: "Connect up to 5 bank accounts" },
-      { id: 3, text: "Track up to 50 expenses per month" },
-      { id: 4, text: "Automated payroll support" },
-      { id: 5, text: "Export up to 12 reports" },
-      { id: 6, text: "Bulk reconcile transactions" },
-      { id: 7, text: "Track in multiple currencies" },
-    ],
-  };
-
-  const enterprise = {
-    icon: "/enterprise.svg",
-    amount: 39,
-    desc: "For even the biggest enterprise companies",
-    benefits: [
-      { id: 1, text: "Send unlimited quotes and invoices" },
-      { id: 2, text: "Connect up to 15 bank accounts" },
-      { id: 3, text: "Track up to 200 expenses per month" },
-      { id: 4, text: "Automated payroll support" },
-      { id: 5, text: "Export up to 25 reports including TPS" },
-    ],
-  };
+  const faqData = [
+    {
+      id: 1,
+      question: "What is the 1-on-1 meeting tracking and note-taking feature?",
+      answer:
+        "Our feature helps you organize and document your meetings by tracking agendas, decisions, and action items, ensuring productive outcomes every time.",
+    },
+    {
+      id: 2,
+      question: "How does it ensure accountability in meetings?",
+      answer:
+        "Our feature helps you organize and document your meetings by tracking agendas, decisions, and action items, ensuring productive outcomes every time.",
+    },
+    {
+      id: 3,
+      question: "Is this feature customizable?",
+      answer:
+        "Our feature helps you organize and document your meetings by tracking agendas, decisions, and action items, ensuring productive outcomes every time.",
+    },
+    {
+      id: 4,
+      question: "Can I access meeting notes across devices?",
+      answer:
+        "Our feature helps you organize and document your meetings by tracking agendas, decisions, and action items, ensuring productive outcomes every time.",
+    },
+    {
+      id: 5,
+      question: "Does this integrate with other tools?",
+      answer:
+        "Our feature helps you organize and document your meetings by tracking agendas, decisions, and action items, ensuring productive outcomes every time.",
+    },
+  ];
 
   return (
-    <div className="bg-[#0D121F] px-24 text-center">
-      <div className="py-24 ">
-        <h2 className="heading__2 text-white">
-          Affordable Plans for Every Team
-        </h2>
-        <p className="heading__5 text-white mt-5">
-          Choose a plan that fits your business needs and start improving your
-          workflow today. No <br /> hidden fees, just clear value for every size
-          team.
+    <div className="min-h-screen w-full bg-colors bg-cover bg-center">
+      <div className="py-24 text-center">
+        <h1 className="heading__2">Frequently Asked Questions</h1>
+        <p className="pt-6 heading__5">
+          Get all the answers you need about our 1-on-1 meeting tracking and
+          note-taking feature. <br />
+          Explore how it works, who it&apos;s for, and how it can improve your
+          productivity.
         </p>
-        <div className="mt-20 flex items-start justify-center gap-6">
-          <div className="p-6 bg-white h-full min-h-[600px] rounded-lg flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3">
-              <Image src={starter.icon} height={25} width={25} alt="icon" />
-              <h4 className="heading__4">Starter</h4>
-            </div>
-            <div className="flex items-end gap-1">
-              <h2 className="heading__2">${starter.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
-            </div>
-            <p className="para__2 text-[#1A202C]">{starter.desc}.</p>
-            <div className="mt-5 flex flex-col items-start gap-4">
-              {starter.benefits.map((text) => (
-                <div className="inline-flex gap-3" key={text.id}>
-                  <Image
-                    alt="check"
-                    height={20}
-                    width={20}
-                    src={"/check.svg"}
-                  />
-                  <p>{text.text}</p>
+        <div className="mt-20 flex flex-col gap-5">
+          {faqData.map((data) => (
+            <button
+              onClick={() => handleActiveAccordion(data.id)}
+              key={data.id}
+              className={`${
+                activeAccordion === data.id
+                  ? "border-[#6b63ff4f]"
+                  : "border-[#D2D6DC] "
+              } w-full max-w-4xl border rounded-md mx-auto p-5 text-[#4B5162]`}
+            >
+              <div className="flex w-full items-center justify-between">
+                <div>
+                  <h4
+                    className={`${
+                      activeAccordion === data.id
+                        ? "bg__gradient text-transparent bg-clip-text"
+                        : ""
+                    } heading__4 transition-all duration-300`}
+                  >
+                    {data.question}
+                  </h4>
                 </div>
-              ))}
-            </div>
-            <button className="btnText bg__gradient w-full p-2 rounded-lg text-sm mt-auto">
-              Get Started
-            </button>
-          </div>
-
-          <div className="p-6 bg-white h-full min-h-[600px] rounded-lg flex flex-col items-start gap-4">
-            <div className="flex items-center justify-between w-full">
-              <div className="flex items-center gap-3">
-                <Image src={smallBiz.icon} height={25} width={25} alt="icon" />
-                <h4 className="heading__4">Small business</h4>
+                <div>
+                  <Image
+                    alt="button"
+                    height={15}
+                    width={15}
+                    src={
+                      activeAccordion === data.id ? "/closed.svg" : "open.svg"
+                    }
+                  />
+                </div>
               </div>
-              <div className="text-[0.7rem] bg-black text-white py-1 px-2.5 rounded-full">
-                Popular
+              <div
+                className={`${
+                  activeAccordion === data.id
+                    ? "block pt-3 h-auto"
+                    : "hidden h-0"
+                } text-start max-w-[80%] para__2 text-[#4B5162] transition-all duration-300`}
+              >
+                {data.answer}
               </div>
-            </div>
-            <div className="flex items-end gap-1">
-              <h2 className="heading__2">${smallBiz.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
-            </div>
-            <p className="para__2 text-[#1A202C]">{smallBiz.desc}.</p>
-            <div className="mt-5 flex flex-col items-start gap-4">
-              {smallBiz.benefits.map((text) => (
-                <div className="inline-flex gap-3" key={text.id}>
-                  <Image
-                    alt="check"
-                    height={20}
-                    width={20}
-                    src={"/check.svg"}
-                  />
-                  <p>{text.text}</p>
-                </div>
-              ))}
-            </div>
-            <button className="btnText bg__gradient w-full p-2 rounded-lg text-sm mt-auto">
-              Get Started
             </button>
-          </div>
-          <div className="p-6 bg-white h-full min-h-[600px] rounded-lg flex flex-col items-start gap-4">
-            <div className="flex items-center gap-3">
-              <Image src={enterprise.icon} height={25} width={25} alt="icon" />
-              <h4 className="heading__4">Enterprise</h4>
-            </div>
-            <div className="flex items-end gap-1">
-              <h2 className="heading__2">${enterprise.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
-            </div>
-            <p className="para__2 text-[#1A202C]">{enterprise.desc}.</p>
-            <div className="mt-5 flex flex-col items-start gap-4">
-              {enterprise.benefits.map((text) => (
-                <div className="inline-flex gap-3" key={text.id}>
-                  <Image
-                    alt="check"
-                    height={20}
-                    width={20}
-                    src={"/check.svg"}
-                  />
-                  <p>{text.text}</p>
-                </div>
-              ))}
-            </div>
-            <button className="btnText bg__gradient w-full p-2 rounded-lg text-sm mt-auto">
-              Get Started
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </div>

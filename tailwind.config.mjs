@@ -13,7 +13,7 @@ const config = {
       backgroundImage: {
         "grid-bg": "url('/grid.svg')",
         'colors': "url('/colorsbg.svg')"
-      }
+      },
     },
   },
   plugins: [],

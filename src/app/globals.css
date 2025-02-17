@@ -2,3 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    overflow-x: hidden;
+}
+
+@layer components {
+    .bg__gradient {
+        @apply bg-gradient-to-b from-[#6C63FF] to-[#2564EA]
+    }
+
+    .para__1 {
+        @apply text-[1rem] text-[#ECECEC]
+    }
+
+    .para__2 {
+        @apply text-[0.9rem] text-[#ECECEC]
+    }
+
+    .para__3 {
+        @apply text-[0.85rem] text-shade
+    }
+
+    .btnText {
+        @apply font-bold text-base text-white
+    }
+
+    .heading__1 {
+        @apply font-bold text-white text-[3.2rem] leading-[3.5rem]
+    }
+
+    .heading__2 {
+        @apply font-bold text-black text-[2.8rem] leading-[3.5rem]
+    }
+
+    .heading__4 {
+        @apply font-semibold text-[1.3rem] text-black
+    }
+
+    .heading__5 {
+        @apply text-base text-[#4B5162]
+    }
+}

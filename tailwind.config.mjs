@@ -8,11 +8,11 @@ const config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        shade: '#334155'
       },
       backgroundImage: {
-        "grid-bg": "url('/grid.png')",
+        "grid-bg": "url('/grid.svg')",
+        'colors': "url('/colorsbg.svg')"
       }
     },
   },

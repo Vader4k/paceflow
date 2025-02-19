@@ -55,7 +55,13 @@ const Excel = () => {
               className="flex flex-col items-start px-5 py-10 rounded-2xl border-2 shadow-md"
               key={item.id}
             >
-              <Image alt="icon" height={50} width={45} src={item.icon} />
+              <Image
+                alt="icon"
+                height={50}
+                width={45}
+                src={item.icon}
+                className="w-auto h-auto"
+              />
               <div className="mt-8">
                 <h2 className="heading__4 capitalize">{item.title}</h2>
                 <p className="para__3 mt-3">{item.desc}</p>

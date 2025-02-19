@@ -61,7 +61,7 @@ const Plan = () => {
             </div>
             <div className="flex items-end gap-1">
               <h2 className="heading__2">${starter.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
+              <span className="text-sm text-[#696780] font-medium font-jarkata">/month</span>
             </div>
             <p className="para__2 text-[#1A202C]">{starter.desc}.</p>
             <div className="mt-5 flex flex-col items-start gap-4">
@@ -88,13 +88,13 @@ const Plan = () => {
                 <Image src={smallBiz.icon} height={25} width={25} alt="icon" />
                 <h4 className="heading__4">Small business</h4>
               </div>
-              <div className="text-[0.7rem] bg-black text-white py-1 px-2.5 rounded-full">
+              <div className="text-[0.7rem] bg-black text-white py-1 px-2.5 rounded-full font-jarkata">
                 Popular
               </div>
             </div>
             <div className="flex items-end gap-1">
               <h2 className="heading__2">${smallBiz.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
+              <span className="text-sm text-[#696780] font-medium font-jarkata">/month</span>
             </div>
             <p className="para__2 text-[#1A202C]">{smallBiz.desc}.</p>
             <div className="mt-5 flex flex-col items-start gap-4">
@@ -121,7 +121,7 @@ const Plan = () => {
             </div>
             <div className="flex items-end gap-1">
               <h2 className="heading__2">${enterprise.amount}</h2>
-              <span className="text-sm text-[#696780] font-medium">/month</span>
+              <span className="text-sm text-[#696780] font-medium font-jarkata">/month</span>
             </div>
             <p className="para__2 text-[#1A202C]">{enterprise.desc}.</p>
             <div className="mt-5 flex flex-col items-start gap-4">

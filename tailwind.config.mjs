@@ -12,8 +12,13 @@ const config = {
       },
       backgroundImage: {
         "grid-bg": "url('/grid.svg')",
-        'colors': "url('/colorsbg.svg')"
+        'colors': "url('/colorsbg.svg')",
+        'steps': "url('/steps.png')"
       },
+      fontFamily: {
+        roboto: 'var(--font-roboto-sans)',
+        jarkata: 'var(--font-plus-Jarkata)'
+      }
     },
   },
   plugins: [],

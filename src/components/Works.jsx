@@ -35,7 +35,7 @@ const Works = () => {
             </div>
           </div>
           <div className="flex items-center gap-4 z-[5]">
-            <div className="size-9 flex items-center justify-center rounded-full bg__gradient p-5 font-semibold">
+            <div className="size-9 font-jarkata flex items-center justify-center rounded-full bg__gradient p-5 font-semibold">
               2
             </div>
             <div>
@@ -45,7 +45,7 @@ const Works = () => {
             </div>
           </div>
           <div className="flex items-center gap-4 z-[5]">
-            <div className="size-9 flex items-center justify-center rounded-full bg__gradient p-5 font-semibold">
+            <div className="font-jarkata size-9 flex items-center justify-center rounded-full bg__gradient p-5 font-semibold">
               3
             </div>
             <div>

@@ -20,16 +20,17 @@ const Hero = () => {
             Elevate your 1:1s Today
           </button>
           <Image
-            className="absolute top-14 left-56"
+            className="absolute top-14 left-56 w-[37px] h-[35px]"
             alt="cursor"
             width={37}
-            height={30}
+            height={35}
             src={"/cursor.svg"}
           />
         </div>
         <Image
           className="w-full px-32 py-20 rounded-2xl"
           alt="hero__image"
+          priority
           height={500}
           width={500}
           src={"/hero.svg"}

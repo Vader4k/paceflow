@@ -32,7 +32,7 @@ const Footer = () => {
             height={60}
             width={250}
             className="w-full max-w-[250px] h-auto"
-            src={"/footerlogo.svg"}
+            src={"/footerLogo.svg"}
           />
           <div className="flex items-center gap-7 text-xs font-light">
             <a title="Features" href="#features">

@@ -33,7 +33,8 @@ const Hero = () => {
           priority
           height={500}
           width={500}
-          src={"/hero.svg"}
+          src={"/hero.png"}
+          unoptimized={true}
         />
         <div className="pt-5">
           <p className="para__2">Trusted by Teams around the world</p>

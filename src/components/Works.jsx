@@ -9,7 +9,9 @@ const Works = () => {
           alt="woman"
           height={50}
           width={50}
-          src={"/woman.svg"}
+          src={"/woman.png"}
+          quality={100}
+          unoptimized={true}
         />
       </div>
       <div className="w-full h-full">

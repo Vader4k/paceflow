@@ -33,6 +33,7 @@ const Navbar = () => {
             height={50}
             width={180}
             src="/pace.svg"
+            priority
             className="w-[180px] h-[50px]"
           />
         </a>

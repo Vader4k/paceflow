@@ -10,7 +10,7 @@ const robotoSans = Roboto({
 
 const plusJarkata = Plus_Jakarta_Sans({
   variable: "--font-plus-Jarkata",
-  weight: ["200" , "300" , "400" , "500" , "600" , "700" , "800"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -22,7 +22,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={twMerge("antialiased", robotoSans.variable, plusJarkata.variable)}>
+      <body
+        className={twMerge(
+          "antialiased",
+          robotoSans.variable,
+          plusJarkata.variable
+        )}
+      >
         {children}
       </body>
     </html>

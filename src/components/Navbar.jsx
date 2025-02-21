@@ -28,7 +28,13 @@ const Navbar = () => {
       />
       <nav className="w-full flex items-center justify-between py-4 para__3 relative z-[20]">
         <a title="Home" href="/" className="flex-1">
-          <Image alt="logo" height={50} width={180} src="/pace.svg" className="w-[180px] h-[50px]"/>
+          <Image
+            alt="logo"
+            height={50}
+            width={180}
+            src="/pace.svg"
+            className="w-[180px] h-[50px]"
+          />
         </a>
         <div className="flex items-center gap-10 flex-1 justify-center">
           {navLinks.map((link) => (
@@ -38,7 +44,9 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex items-center gap-10 flex-1 justify-end">
-          <Link title="Sign in" href="/signin">Sign in</Link>
+          <Link title="Sign in" href="/signin">
+            Sign in
+          </Link>
           <button className="btnText bg__gradient px-6 py-3 rounded-2xl">
             Get Started Today
           </button>
